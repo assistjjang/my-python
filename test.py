@@ -33,16 +33,20 @@ class WindowClass(QMainWindow, form_class) :
         self.select_eur.clicked.connect(self.sel_rb_eur)
         self.select_gbp.clicked.connect(self.sel_rb_gbp)
         self.change_btn.clicked.connect(self.btnClick)
+        self.exchange_curr_info.setText("하나은행 환율정보: 1 유로 = " + str(self.exchange_val) + " 원")
     
     def btnClick(self):
-        test = str(self.exchange_val * self.transfer_fee_val / 100)
-        self.dp_curr.setText(test + " 억원")
+        final_val = str(round(self.exchange_val * self.transfer_fee_val / 100 , 2))
+        print("최종 선수 몸값은 " + final_val + "억원 입니다.")
+        self.dp_curr.setText(final_val + " 억원")
     
     def sel_rb_eur(self):
         self.exchange_val = float(change_curr.get_eur())
+        self.exchange_curr_info.setText("하나은행 환율정보: 1 유로 = " + str(self.exchange_val) + " 원")
     
     def sel_rb_gbp(self):
         self.exchange_val = float(change_curr.get_gbp())
+        self.exchange_curr_info.setText("하나은행 환율정보: 1 파운드 = " + str(self.exchange_val) + " 원")
 
     def fun_transfer_fee_editfinished(self):
         self.transfer_fee_val = float(self.transfer_fee.text())
@@ -61,4 +65,3 @@ if __name__ == "__main__" :
 
     #프로그램을 이벤트루프로 진입시키는(프로그램을 작동시키는) 코드
     app.exec_()
-
