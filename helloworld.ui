@@ -50,6 +50,32 @@
      <string>한화로 변환</string>
     </property>
    </widget>
+   <widget class="QRadioButton" name="select_eur">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>90</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>유로</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="select_gbp">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>40</y>
+      <width>90</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>파운드</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

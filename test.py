@@ -22,13 +22,24 @@ form_class = uic.loadUiType(form)[0]
 
 #화면을 띄우는데 사용되는 Class 선언
 class WindowClass(QMainWindow, form_class) :
+    exchange_val = 0
     def __init__(self) :
         super().__init__()
         self.setupUi(self)
+        self.select_eur.clicked.connect(self.sel_rb_eur)
+        self.select_gbp.clicked.connect(self.sel_rb_gbp)
         self.change_btn.clicked.connect(self.btnClick)
+    
     def btnClick(self):
-        exchange_val = change_curr.get_eur()
-        self.dp_curr.setText(exchange_val + " 원")
+        self.dp_curr.setText(self.exchange_val + " 원")
+    
+    def sel_rb_eur(self):
+        self.exchange_val = change_curr.get_eur()
+    
+    def sel_rb_gbp(self):
+        self.exchange_val = change_curr.get_gbp()
+
+
 # 출처: https://jy-tblog.tistory.com/26 [jy.log:티스토리]
 
 if __name__ == "__main__" :
