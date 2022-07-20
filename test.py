@@ -27,8 +27,8 @@ class WindowClass(QMainWindow, form_class) :
         self.setupUi(self)
         self.change_btn.clicked.connect(self.btnClick)
     def btnClick(self):
-        print("버튼이 클릭되었습니다.")
-        change_curr.get_eur()
+        exchange_val = change_curr.get_eur()
+        self.dp_curr.setText(exchange_val + " 원")
 # 출처: https://jy-tblog.tistory.com/26 [jy.log:티스토리]
 
 if __name__ == "__main__" :
