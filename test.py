@@ -22,7 +22,7 @@ form_class = uic.loadUiType(form)[0]
 
 #화면을 띄우는데 사용되는 Class 선언
 class WindowClass(QMainWindow, form_class) :
-    exchange_val = 0
+    exchange_val = float(change_curr.get_eur())
     transfer_fee_val = 0
     
     def __init__(self) :

@@ -62,6 +62,9 @@
     <property name="text">
      <string>유로</string>
     </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QRadioButton" name="select_gbp">
     <property name="geometry">
