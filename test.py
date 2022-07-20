@@ -25,6 +25,11 @@ class WindowClass(QMainWindow, form_class) :
     def __init__(self) :
         super().__init__()
         self.setupUi(self)
+        self.change_btn.clicked.connect(self.btnClick)
+    def btnClick(self):
+        print("버튼이 클릭되었습니다.")
+        change_curr.get_eur()
+# 출처: https://jy-tblog.tistory.com/26 [jy.log:티스토리]
 
 if __name__ == "__main__" :
     #QApplication : 프로그램을 실행시켜주는 클래스
@@ -38,6 +43,4 @@ if __name__ == "__main__" :
 
     #프로그램을 이벤트루프로 진입시키는(프로그램을 작동시키는) 코드
     app.exec_()
-    get_eur()
-    get_gbp()
 
