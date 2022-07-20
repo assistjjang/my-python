@@ -35,8 +35,8 @@ class WindowClass(QMainWindow, form_class) :
         self.change_btn.clicked.connect(self.btnClick)
     
     def btnClick(self):
-        test = str(self.exchange_val * self.transfer_fee_val)
-        self.dp_curr.setText(test + " 원")
+        test = str(self.exchange_val * self.transfer_fee_val / 100)
+        self.dp_curr.setText(test + " 억원")
     
     def sel_rb_eur(self):
         self.exchange_val = float(change_curr.get_eur())
