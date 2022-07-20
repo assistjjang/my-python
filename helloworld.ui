@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>축구선수 몸값 계산기</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="dp_curr">
