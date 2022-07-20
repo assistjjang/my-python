@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>327</width>
-    <height>218</height>
+    <width>338</width>
+    <height>235</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QLabel" name="dp_curr">
     <property name="geometry">
      <rect>
-      <x>60</x>
-      <y>130</y>
+      <x>80</x>
+      <y>150</y>
       <width>191</width>
       <height>31</height>
      </rect>
@@ -40,8 +40,8 @@
    <widget class="QPushButton" name="change_btn">
     <property name="geometry">
      <rect>
-      <x>110</x>
-      <y>80</y>
+      <x>130</x>
+      <y>100</y>
       <width>91</width>
       <height>41</height>
      </rect>
@@ -53,8 +53,8 @@
    <widget class="QRadioButton" name="select_eur">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>20</y>
+      <x>240</x>
+      <y>40</y>
       <width>90</width>
       <height>16</height>
      </rect>
@@ -66,8 +66,8 @@
    <widget class="QRadioButton" name="select_gbp">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>40</y>
+      <x>240</x>
+      <y>60</y>
       <width>90</width>
       <height>16</height>
      </rect>
@@ -76,13 +76,58 @@
      <string>파운드</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="transfer_fee">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>40</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="inputMask">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>0</y>
+      <width>291</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>선수 몸값을 M(100만) 단위로 입력해 주세요.</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>327</width>
+     <width>338</width>
      <height>21</height>
     </rect>
    </property>

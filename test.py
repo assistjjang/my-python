@@ -23,22 +23,29 @@ form_class = uic.loadUiType(form)[0]
 #화면을 띄우는데 사용되는 Class 선언
 class WindowClass(QMainWindow, form_class) :
     exchange_val = 0
+    transfer_fee_val = 0
+    
     def __init__(self) :
         super().__init__()
         self.setupUi(self)
+        #self.transfer_fee.setValidator(QDoubleValidator(-999.0, 999.0, 2))
+        self.transfer_fee.editingFinished.connect(self.fun_transfer_fee_editfinished)
         self.select_eur.clicked.connect(self.sel_rb_eur)
         self.select_gbp.clicked.connect(self.sel_rb_gbp)
         self.change_btn.clicked.connect(self.btnClick)
     
     def btnClick(self):
-        self.dp_curr.setText(self.exchange_val + " 원")
+        test = str(self.exchange_val * self.transfer_fee_val)
+        self.dp_curr.setText(test + " 원")
     
     def sel_rb_eur(self):
-        self.exchange_val = change_curr.get_eur()
+        self.exchange_val = float(change_curr.get_eur())
     
     def sel_rb_gbp(self):
-        self.exchange_val = change_curr.get_gbp()
+        self.exchange_val = float(change_curr.get_gbp())
 
+    def fun_transfer_fee_editfinished(self):
+        self.transfer_fee_val = float(self.transfer_fee.text())
 
 # 출처: https://jy-tblog.tistory.com/26 [jy.log:티스토리]
 
